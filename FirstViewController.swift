@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  FirstViewController.swift
 //  passData
 //
 //  Created by sharon mcdermott on 5/11/17.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
-    
-    
-    @IBOutlet weak var nameDisplayLabel: UILabel!
-    
-    @IBOutlet weak var backButton: UIBarButtonItem!
+class FirstViewController: UIViewController {
 
+    @IBOutlet weak var nameTextField: UITextField!
+    
+    @IBAction func toSecondVC(_ sender: UIBarButtonItem) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

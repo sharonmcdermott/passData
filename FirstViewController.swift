@@ -12,7 +12,15 @@ class FirstViewController: UIViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // I used var secondController and it said to switch to "let"
+        let secondController = segue.destination as! SecondViewController
+        secondController.nameString = nameTextField.text!
+    }
+    
     @IBAction func toSecondVC(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "segue", sender: self)
     }
     
     override func viewDidLoad() {

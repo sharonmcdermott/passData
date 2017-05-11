@@ -13,10 +13,15 @@ class SecondViewController: UIViewController {
     
     @IBOutlet weak var nameDisplayLabel: UILabel!
     
+    var nameString = String()
+
+    
     @IBOutlet weak var backButton: UIBarButtonItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        nameDisplayLabel.text = nameString
 
         // Do any additional setup after loading the view.
     }

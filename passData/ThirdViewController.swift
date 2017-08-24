@@ -8,11 +8,11 @@
 
 import UIKit
 
-
+    var nameTwoString = String()
 
 class ThirdViewController: UIViewController {
     
-    var nameTwoString = String()
+    
 
     @IBOutlet weak var nameDisplayLabelThree: UILabel!
     
@@ -22,6 +22,7 @@ class ThirdViewController: UIViewController {
         super.viewDidLoad()
         
         nameDisplayLabelThree.text = nameTwoString
+        print(nameDisplayLabelThree)
 
         // Do any additional setup after loading the view.
     }

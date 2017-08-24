@@ -23,21 +23,19 @@ class SecondViewController: UIViewController {
         let thirdController = segueTwo.destination as! ThirdViewController
         thirdController.nameTwoString = nameDisplayLabel.text!
     }
-*/
-    
-    @IBOutlet weak var backButton: UIBarButtonItem!
 
-    @IBAction func segueTwo(_ sender: Any) {
-        performSegue(withIdentifier: "segueTwo", sender: self)
-    }
+*/
+
+
+
     
     
-/*
+
     
     @IBAction func toThirdVC(_ sender: UIBarButtonItem) {
         performSegue(withIdentifier: "segueTwo", sender: self)
     }
-*/
+
     override func viewDidLoad() {
         super.viewDidLoad()
         

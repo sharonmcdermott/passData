@@ -19,9 +19,12 @@ class FirstViewController: UIViewController {
         secondController.nameOneString = nameTextField.text!
     }
     
+    
+
     @IBAction func toSecondVC(_ sender: UIBarButtonItem) {
-        performSegue(withIdentifier: "segue", sender: self)
+        performSegue(withIdentifier: "segueOne", sender: self)
     }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

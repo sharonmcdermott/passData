@@ -100,15 +100,15 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="2nd VC" id="9bJ-Ng-wFb">
-                                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="fqx-f3-nVL">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt; 1st VC" id="fqx-f3-nVL" userLabel="backToFirstVC">
                                             <connections>
                                                 <segue destination="BYZ-38-t0r" kind="show" identifier="segueBack" animates="NO" id="E9N-Je-fpe"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="3rd VC &gt;" id="1AE-yb-Nqx">
+                                        <barButtonItem key="rightBarButtonItem" title="3rd VC &gt;" id="1AE-yb-Nqx" userLabel="toThirdVC">
                                             <connections>
                                                 <action selector="segueTwo:" destination="hth-wx-ggv" id="Tq4-zC-4NV"/>
-                                                <segue destination="nD1-xT-s82" kind="show" id="PSe-bI-ORQ"/>
+                                                <segue destination="nD1-xT-s82" kind="show" identifier="segueTwo" animates="NO" id="PSe-bI-ORQ"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -173,7 +173,7 @@
                                 </constraints>
                                 <items>
                                     <navigationItem title="3rd VC" id="ilo-SA-CJ2">
-                                        <barButtonItem key="leftBarButtonItem" title="&lt; 2nd VC" id="9VY-5U-fH7">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt; 2nd VC" id="9VY-5U-fH7" userLabel="backToSecondVC">
                                             <connections>
                                                 <segue destination="hth-wx-ggv" kind="show" identifier="sequeBackTo2ndVC" animates="NO" id="3Tb-lA-ufj"/>
                                             </connections>
@@ -191,6 +191,12 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFb-I2-cmL">
+                                <rect key="frame" x="0.0" y="265" width="375" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -198,7 +204,10 @@
                             <constraint firstItem="oAx-Jj-QB0" firstAttribute="top" secondItem="ink-bC-yY9" secondAttribute="bottom" constant="-20" id="6oq-Hf-11u"/>
                             <constraint firstItem="g6H-i8-Te6" firstAttribute="centerY" secondItem="SqF-M5-Auc" secondAttribute="centerY" id="6zW-ar-nSz"/>
                             <constraint firstItem="g6H-i8-Te6" firstAttribute="leading" secondItem="SqF-M5-Auc" secondAttribute="leading" id="Gh7-DW-Nua"/>
+                            <constraint firstItem="g6H-i8-Te6" firstAttribute="top" secondItem="rFb-I2-cmL" secondAttribute="bottom" constant="21" id="MM3-TM-gH3"/>
+                            <constraint firstItem="rFb-I2-cmL" firstAttribute="leading" secondItem="SqF-M5-Auc" secondAttribute="leading" id="RWF-0L-d74"/>
                             <constraint firstAttribute="trailing" secondItem="g6H-i8-Te6" secondAttribute="trailing" id="ZAi-bu-y6K"/>
+                            <constraint firstAttribute="trailing" secondItem="rFb-I2-cmL" secondAttribute="trailing" id="fhF-uo-tcK"/>
                             <constraint firstAttribute="trailing" secondItem="oAx-Jj-QB0" secondAttribute="trailing" id="qbh-18-mOL"/>
                         </constraints>
                     </view>

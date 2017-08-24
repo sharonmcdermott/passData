@@ -8,20 +8,41 @@
 
 import UIKit
 
+
+
 class SecondViewController: UIViewController {
     
+    var nameOneString = String()
     
     @IBOutlet weak var nameDisplayLabel: UILabel!
-    
-    var nameString = String()
+    @IBOutlet weak var nameDisplayLabelTwo: UILabel!
 
+    
+/*
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let thirdController = segueTwo.destination as! ThirdViewController
+        thirdController.nameTwoString = nameDisplayLabel.text!
+    }
+*/
     
     @IBOutlet weak var backButton: UIBarButtonItem!
 
+    @IBAction func segueTwo(_ sender: Any) {
+        performSegue(withIdentifier: "segueTwo", sender: self)
+    }
+    
+    
+/*
+    
+    @IBAction func toThirdVC(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "segueTwo", sender: self)
+    }
+*/
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nameDisplayLabel.text = nameString
+        nameDisplayLabel.text = nameOneString
+        nameDisplayLabelTwo.text = nameOneString
 
         // Do any additional setup after loading the view.
     }

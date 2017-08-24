@@ -1,33 +1,33 @@
 //
-//  FirstViewController.swift
+//  ThirdViewController.swift
 //  passData
 //
-//  Created by sharon mcdermott on 5/11/17.
+//  Created by sharon mcdermott on 8/23/17.
 //  Copyright © 2017 sharon mcdermott. All rights reserved.
 //
 
 import UIKit
 
-class FirstViewController: UIViewController {
 
-    @IBOutlet weak var nameTextField: UITextField!
+
+class ThirdViewController: UIViewController {
+    
+    var nameTwoString = String()
+
+    @IBOutlet weak var nameDisplayLabelThree: UILabel!
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // I used var secondController and it said to switch to "let"
-        let secondController = segue.destination as! SecondViewController
-        secondController.nameOneString = nameTextField.text!
-    }
-    
-    @IBAction func toSecondVC(_ sender: UIBarButtonItem) {
-        performSegue(withIdentifier: "segue", sender: self)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        nameDisplayLabelThree.text = nameTwoString
 
         // Do any additional setup after loading the view.
     }
+    
+    
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
